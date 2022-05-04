@@ -146,7 +146,7 @@ class FreeplayState extends MusicBeatState
 
 		scoreText = new FlxText(FlxG.width * 0.7, 5, 0, "", 32);
 		scoreText.setFormat(Paths.font("mario2.ttf"), 32, FlxColor.WHITE, RIGHT);
-		scoreText.size = 18;
+		scoreText.size = 14;
 
 		scoreBG = new FlxSprite(scoreText.x - 6, 0).makeGraphic(1, 66, 0xFF000000);
 		scoreBG.alpha = 0.6;
@@ -198,15 +198,15 @@ class FreeplayState extends MusicBeatState
 
 		#if PRELOAD_ALL
 		var leText:String = "Press SPACE to listen to the Song / Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy.";
-		var size:Int = 16;
+		var size:Int = 14;
 		#else
 		var leText:String = "Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy.";
-		var size:Int = 18;
+		var size:Int = 15;
 		#end
 		var text:FlxText = new FlxText(textBG.x, textBG.y + 4, FlxG.width, leText, size);
 		text.setFormat(Paths.font("mario2.ttf"), size, FlxColor.WHITE, RIGHT);
 		text.scrollFactor.set();
-		text.size = 14;
+		text.size = 18;
 		add(text);
 		super.create();
 	}
